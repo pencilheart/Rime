@@ -11,9 +11,8 @@ cd ~/Library/rime
 git remote get-url upstream || git remote add upstream https://github.com/iDvel/rime-ice.git
 git fetch upstream main
 git checkout main
-git merge upstream/main --allow-unrelated-histories
+git merge upstream/main --allow-unrelated-histories --no-edit
 git push origin main
 
 # 记录结束时间
 echo "$(date) - Finished pull_repo.sh" >> ~/Library/rime/pull_repo.log
-
